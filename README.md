@@ -7,7 +7,7 @@ In this paper, we present \textbf{scHashFormer}, which replaces all-pairs comput
 The neural network architecture of scHashFormer. LSH indexer: a multi-head, learnable LSH encoder produces continuous hash embeddings and binary hash codes; identical codes define hash neighbourhoods. A contrastive objective tightens within-neighbourhood similarity and separates cross-neighbourhood pairs, and a ZINB decoder reconstructs counts to retain count-based biology. Affinity encoder (attention-based): for each cell, \emph{tokenised same-neighbourhood cells} are encoded by a lightweight neighbourhood Transformer to obtain structure-aware embeddings; a KL-based head yields soft cluster assignments, and ZINB reconstruction regularises the embedding. The workflow preserves local manifold structure while avoiding the construction of all pairwise relationships.![fram1 (1)](./scHashFormer.png)
 
 ## Requirements
-Creating a conda environment named \$env_name\$ and installing the requirements using pip 
+Creating a conda environment named `env_name` and installing the requirements using pip 
 ```
 $ conda create --name [env_name] python=3.11
 $ conda activate [env_name] 
@@ -15,7 +15,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Datasets and corresponding configs
-Downloading the scRNA-seq data named \$dataset_name\$ to the path \$dataset_path\$ and modify the `data_dir` in corresponding configuration file `config\[dataset_name].yml` to \$dataset_name\$.
+Downloading the scRNA-seq data named \$dataset_name\$ to the path \$dataset_path\$ and modifying the `data_dir` in corresponding configuration file `config\[dataset_name].yml` to \$dataset_name\$.
 
 The specific data file can be downloaded from the following website:
 - The Chen data downloaded from [GSE87544](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE87544),
