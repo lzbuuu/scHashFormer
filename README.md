@@ -1,2 +1,2 @@
 # scHashFormer
-The code of Hash-Accelerated Graph Transformer for Large-Scale scRNA-Seq Clustering
+The code of Fast and Scalable scRNA-seq Clustering via Local Attention
