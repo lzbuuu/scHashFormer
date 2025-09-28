@@ -15,7 +15,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Datasets and corresponding configs
-Downloading the scRNA-seq data named \$dataset_name\$ to the path \$dataset_path\$ and modifying the `data_dir` in corresponding configuration file `config\[dataset_name].yml` to \$dataset_name\$.
+Downloading the scRNA-seq data named `dataset_name` to the path `dataset_path` and modifying the `data_dir` in corresponding configuration file `config\[dataset_name].yml` to `dataset_name`.
 
 The specific data file can be downloaded from the following website:
 - The Chen data downloaded from [GSE87544](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE87544),
