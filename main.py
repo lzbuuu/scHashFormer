@@ -3,7 +3,6 @@ import os
 import wandb
 import torch
 import numpy as np
-import scSimGCL
 from data import load_dataset
 import torch.utils.data as Data
 from utils import setup_seed, loader_construction, evaluate, hop2token, clustering
@@ -201,4 +200,5 @@ if __name__ == '__main__':
         model.load_state_dict(torch.load(pretrained_file))
         fine_tune(cfg, train_loader, model)
         torch.save(model.state_dict(), pretrained_file)
+
 
