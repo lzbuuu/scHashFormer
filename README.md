@@ -1,6 +1,6 @@
 # Effective and Scalable scRNA-seq Clustering via Hash Neighbourhoods-based Local Graph Transformer
 ## Abstract
-The code of Effective and Scalable scRNA-seq Clustering via Hash Neighbourhoods-based Local Graph Transformer.
+The code of *scHashFormer: enhancing efficiency and scalability of scRNA-seq data clustering via a hash-based Transformer*.
 In this paper, we present scHashFormer, which replaces all-pairs computation with learnable locality-sensitive hashing to group transcriptionally similar cells into high-purity hash neighbourhoods in near-linear time. Based on the hash neighbourhoods graph, a lightweight graph Transformer performs message passing within each neighbourhood to learn structure-aware embeddings. Training is regularised by a zero-inflated negative binomial (ZINB) objective, removing the need for an explicit global graph. Across datasets spanning 1e4-1e6 cells, scHashFormer outperforms leading methods while reducing runtime and memory by up to an order of magnitude and avoiding out-of-memory failures. The resulting embeddings improve cell-type annotation, better separate rare and transitional populations, enable batch-robust integration without over-mixing, and preserve developmental trajectories consistent with lineage markers. Together, scHashFormer makes million-cell clustering and downstream single-cell analyses routine and reproducible at the atlas scale.
 
 ## Architecture
