@@ -1,6 +1,6 @@
 # Hash-Driven Tokenization Enables Scalable Transformer Models for scRNA-seq Analysis
 ## Abstract
-The code of *scHashFormer: enhancing efficiency and scalability of scRNA-seq data clustering via a hash-based Transformer*.
+The code of *scHashFormer: Hash-Driven Tokenization Enables Scalable Transformer Models for scRNA-seq Analysis*.
 In this paper, we introduce a hash-driven tokenization mechanism, where we design a neural network to simulate the locally sensitive hashing function and train it by self-supervised learning to realize similar cells with the same hash codes. Extensive experiments demonstrate that our mechanism outperforms similarity-based methods in downstream tasks, such as cell-type identification, trajectory preservation, and gene differential expression analysis. In addition, it scales efficiently to large-scale datasets, delivering up to an order-of-magnitude speedup, avoiding out-of-memory failures, and providing a principled framework for enabling Transformer models in unsupervised scRNA-seq analysis.
 
 ## Architecture
