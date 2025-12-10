@@ -6,14 +6,6 @@ In this paper, we introduce a hash-driven tokenization mechanism, where we desig
 ## Architecture
 The neural network architecture of scHashFormer. ![fram1 (1)](./scHashFormer.png)
 
-## Requirements
-Creating a conda environment named `env_name` and installing the requirements using pip 
-```
-$ conda create --name [env_name] python=3.11
-$ conda activate [env_name] 
-$ pip install -r requirements.txt
-```
-
 ## Datasets and corresponding configs
 Downloading the scRNA-seq data named `dataset_name` to the path `dataset_path` and modifying the `data_dir` in corresponding configuration file `configs\[dataset_name].yml` to `dataset_name`.
 
