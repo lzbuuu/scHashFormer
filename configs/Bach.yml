@@ -1,7 +1,7 @@
 dataset_name: 'Bach'
 data_dir: '/home/user/data_zyx/datasets/single-cell/Bach/adata_preprocessed.h5ad'
 type_key: 'cell_type1'
-num_classes: 6
+num_classes: 8
 
 batch_size: 1000
 fine_batch_size: 64
