@@ -1,7 +1,7 @@
 dataset_name: 'Chen'
 data_dir: '/home/user/data_zyx/datasets/single-cell/Chen/adata_preprocessed.h5ad'
 type_key: 'cell_type1'
-num_classes: 6
+num_classes: 46
 
 batch_size: 1000
 fine_batch_size: 64
