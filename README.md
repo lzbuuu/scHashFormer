@@ -1,4 +1,4 @@
-# Hash-Driven Tokenization Enables Scalable Transformer Models for scRNA-seq Analysis
+# scHashFormer: A Hash-Driven Graph Transformer for Scalable scRNA-seq Clustering
 ## Abstract
 The code of *scHashFormer: Hash-Driven Tokenization Enables Scalable Transformer Models for scRNA-seq Analysis*.
 In this paper, we introduce a hash-driven tokenization mechanism, where we design a neural network to simulate the locally sensitive hashing function and train it by self-supervised learning to realize similar cells with the same hash codes. Extensive experiments demonstrate that our mechanism outperforms similarity-based methods in downstream tasks, such as cell-type identification, trajectory preservation, and gene differential expression analysis. In addition, it scales efficiently to large-scale datasets, delivering up to an order-of-magnitude speedup, avoiding out-of-memory failures, and providing a principled framework for enabling Transformer models in unsupervised scRNA-seq analysis.
@@ -20,10 +20,4 @@ The specific data file can be downloaded from the following website:
 - The astrocytes cell downloaded from [Neuroscience Multi-omic Data Archive](https://data.nemoarchive.org/biccn/grant/u01_feng/feng/transcriptome/sncell/10x_v3.1/),
 - The arabidopsis cell downloaded from [GSE290214](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE290214).
 
-## Usage
-For the Bach dataset, run
-```
-$ python main.py --dataset Bach
-```
 
-## Citation
