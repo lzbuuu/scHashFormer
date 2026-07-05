@@ -42,7 +42,8 @@ def pretraining(cfg, X, sf, raw, Y, model, device):
             # _, _, meanbatch, dispbatch, pibatch = model(xbatch)
             # re_loss = model.ZINB_loss(sfbatch, rawbatch, meanbatch, dispbatch, pibatch)
             _, ebatch, meanbatch, dispbatch, pibatch = model(xbatch)
-            s = torch.sign(ebatch)
+            # s = torch.sign(ebatch)
+            s = torch.round(ebatch)
             powers_of_two = 2 ** torch.arange(s.size(-1) - 1, -1, -1).to(s.device)
             bucket_index = torch.sum(s * powers_of_two, dim=-1)  # [batch_size, n_hashes] sample_id, bucket_id
             bucket_index = bucket_index.to(torch.long)
@@ -94,7 +95,8 @@ def fine_tuning(cfg, X, sf, raw, Y, model, hash_model, device, cell_type_map):
 
     with torch.no_grad():
         _, e = hash_model.encodeBatch(X, 128, device=device)
-        s = torch.where(torch.sign(e)==-1, 0, 1).cpu()
+        # s = torch.where(torch.sign(e)==-1, 0, 1).cpu()
+        s = torch.round(e).cpu()
         powers_of_two = 2 ** torch.arange(s.size(-1) - 1, -1, -1)
         bucket_index = torch.sum(s * powers_of_two, dim=-1)  # Convert binary index to decimal index [N, 1]
         index_mapping = utils.get_index_mapping(bucket_index)  # {bucket_id: decimal_index}
