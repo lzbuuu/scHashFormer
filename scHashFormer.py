@@ -96,7 +96,7 @@ class LSH(nn.Module):
     def forward(self, x):
         hashes = []
         for layer in self.layers:
-            h = F.sigmoid(layer(x))  # Apply tanh activation
+            h = layer(x)  # Apply tanh activation
             # h = torch.round(x)  # Round to nearest integer
             hashes.append(h)
         hashes = torch.cat(hashes, dim=1)  # Concatenate along the feature dimension
